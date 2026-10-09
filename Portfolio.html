@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudheera K — AI Product Manager & Product Thinker</title>
+  <meta name="description" content="Portfolio of Sudheera K (Haripriya Sudheera Konduri): AI Product Manager & Data Analyst specializing in user discovery, product psychology, and data-driven execution.">
+  <meta name="theme-color" content="#FAFAF8">
+
+  <style>
+    /* -------------------------------------------------------------
+       DESIGN SYSTEM & CSS VARIABLES
+       Apple-inspired editorial minimalism meets product craftsmanship
+       ------------------------------------------------------------- */
+    :root {
+      --bg-primary: #FAFAF8;
+      --bg-secondary: #F3F3F0;
+      --bg-card: #FFFFFF;
+      --bg-card-subtle: #F6F6F3;
+      --text-primary: #121316;
+      --text-secondary: #585A60;
+      --text-tertiary: #878A92;
+      --border-subtle: rgba(18, 19, 22, 0.08);
+      --border-medium: rgba(18, 19, 22, 0.14);
+      --accent-primary: #004BE4;       /* Restrained electric cobalt */
+      --accent-soft: rgba(0, 75, 228, 0.08);
+      --focus-ring: #004BE4;
+      --container-max: 1040px;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.03);
+      --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.06);
+      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --transition-standard: 200ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-stack);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.6;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Accessibility: Focus States & Skip Link */
+    :focus-visible {
+      outline: 2px solid var(--focus-ring);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1.5rem;
+      background: var(--text-primary);
+      color: var(--bg-primary);
+      padding: 0.75rem 1.25rem;
+      z-index: 1000;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 500;
+      transition: top var(--transition-standard);
+    }
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    /* Layout Container */
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      color: var(--text-primary);
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Section Structure */
+    section {
+      padding: 5.5rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-eyebrow {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-primary);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+      margin-bottom: 1.25rem;
+    }
+
+    .section-subhead {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin-bottom: 3rem;
+    }
+
+    /* Navigation */
+    .site-header {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 250, 248, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      z-index: 99;
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .brand {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand-status {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10B981;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      transition: color var(--transition-standard);
+      font-weight: 450;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-cta {
+      background: var(--text-primary);
+      color: #FFFFFF !important;
+      padding: 0.45rem 0.9rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.8125rem !important;
+      font-weight: 500 !important;
+      transition: opacity var(--transition-standard) !important;
+    }
+    .nav-cta:hover {
+      opacity: 0.88;
+    }
+
+    /* Mobile Menu Button */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-medium);
+      padding: 0.4rem 0.65rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      color: var(--text-primary);
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 6.5rem 0 5.5rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hero-container {
+      max-width: 860px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5.2vw, 4.1rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      margin-bottom: 1.5rem;
+      font-weight: 650;
+    }
+
+    .hero-title span {
+      color: var(--text-tertiary);
+      font-weight: 400;
+    }
+
+    .hero-description {
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 2.25rem;
+      max-width: 720px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      padding: 0.75rem 1.4rem;
+      border-radius: var(--radius-sm);
+      transition: all var(--transition-standard);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--text-primary);
+      color: #FFFFFF;
+      border: 1px solid var(--text-primary);
+    }
+    .btn-primary:hover {
+      background: #25272C;
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border-medium);
+    }
+    .btn-secondary:hover {
+      background: var(--bg-secondary);
+      border-color: var(--text-secondary);
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    .about-narrative p {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+    }
+
+    .about-narrative strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .about-sidebar {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+    }
+
+    .sidebar-block {
+      margin-bottom: 1.5rem;
+    }
+    .sidebar-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .sidebar-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-tertiary);
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .sidebar-value {
+      font-size: 0.9375rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.25rem;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      transition: border-color var(--transition-standard), box-shadow var(--transition-standard);
+      position: relative;
+    }
+
+    .project-card:hover {
+      border-color: var(--border-medium);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .project-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-primary);
+      background: var(--accent-soft);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .project-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .project-summary {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.75rem;
+      max-width: 780px;
+    }
+
+    .case-details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-subtle);
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 1.5rem;
+    }
+
+    .case-detail-item h4 {
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-tertiary);
+      margin-bottom: 0.4rem;
+    }
+
+    .case-detail-item p {
+      font-size: 0.9375rem;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+
+    .project-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .tech-pill-list {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .tech-pill {
+      font-size: 0.8125rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      padding: 0.2rem 0.65rem;
+      border-radius: 4px;
+      color: var(--text-secondary);
+    }
+
+    /* Expandable Case Study Accordion */
+    .accordion-toggle {
+      background: transparent;
+      border: none;
+      color: var(--accent-primary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      cursor: pointer;
+      padding: 0.4rem 0;
+    }
+    .accordion-toggle:hover {
+      text-decoration: underline;
+    }
+
+    .case-expanded-content {
+      display: none;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px dashed var(--border-medium);
+    }
+
+    .case-expanded-content.is-open {
+      display: block;
+      animation: fadeIn 250ms ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Experience Timeline */
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .experience-item {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .experience-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .exp-period {
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .exp-type-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      background: var(--bg-secondary);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .exp-role-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .exp-company {
+      font-size: 0.95rem;
+      color: var(--accent-primary);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .exp-bullets {
+      list-style-type: none;
+    }
+
+    .exp-bullets li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .exp-bullets li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--text-tertiary);
+    }
+
+    .exp-bullets li strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* Skills Grid */
+    .skills-category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .skills-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+    }
+
+    .skills-block h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skills-pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      font-size: 0.875rem;
+      background: var(--bg-card-subtle);
+      color: var(--text-primary);
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      font-weight: 450;
+    }
+
+    /* Education & Certifications */
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .credential-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+    }
+
+    .credential-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .credential-sub {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .credential-list {
+      list-style: none;
+    }
+
+    .credential-list li {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      padding: 0.5rem 0;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .credential-list li span:last-child {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+    }
+
+    /* Contact Section */
+    .contact-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem 2.5rem;
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .contact-container h2 {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      margin-bottom: 1rem;
+    }
+
+    .contact-container p {
+      font-size: 1.1rem;
+      max-width: 580px;
+      margin: 0 auto 2.25rem auto;
+      color: var(--text-secondary);
+    }
+
+    .contact-links-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    footer {
+      padding: 3rem 0;
+      background: var(--bg-primary);
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-social-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-social-links a {
+      color: var(--text-secondary);
+      transition: color var(--transition-standard);
+    }
+    .footer-social-links a:hover {
+      color: var(--text-primary);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      section {
+        padding: 4rem 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg-primary);
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border-subtle);
+        gap: 1.25rem;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .experience-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .case-details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .credentials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-container {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main Navigation">
+        <a href="#hero" class="brand">
+          <span class="brand-status" title="Open to opportunities"></span>
+          Sudheera K
+        </a>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation menu">
+          Menu
+        </button>
+
+        <ul class="nav-links" id="primary-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Selected Work</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact" class="nav-cta">Let's Connect</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-container">
+          <div class="hero-badge">
+            <span>●</span> Aspiring Associate PM & AI Product Specialist
+          </div>
+          <h1 class="hero-title">
+            Observing human friction.<br>
+            <span>Engineering intelligent products.</span>
+          </h1>
+          <p class="hero-description">
+            I combine 1.2 years of rigorous data analytics with user-centered product discovery and applied LLM workflows. I treat every product as a human behavior system shaped by psychology, friction, and clear data feedback loops.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">Explore Case Studies</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <span class="section-eyebrow">Career Philosophy</span>
+        <h2 class="section-title">Rooted in Data, Driven by User Psychology</h2>
+
+        <div class="about-grid">
+          <div class="about-narrative">
+            <p>
+              Most people assume product management begins with roadmap decks or feature templates. For me, it began with a restless curiosity about human decision-making: why users drop off mid-flow, why certain interfaces feel frictionless, and how minor architectural choices reshape customer habits.
+            </p>
+            <p>
+              My professional foundation is in <strong>enterprise data analytics</strong>, where I processed and validated thousands of records across InsurTech SaaS workflows. That background gave me respect for clean data pipelines, metric integrity, and empirical validation.
+            </p>
+            <p>
+              Today, I channel that analytical discipline into <strong>AI Product Management</strong>. Through immersive work at PML School and the HelloPM AI Product Cohort, I turn unstructured user qualitative feedback into Jobs-to-Be-Done (JTBD), prioritize feature opportunities, and prototype AI-assisted interactions that solve genuine human friction.
+            </p>
+          </div>
+
+          <aside class="about-sidebar">
+            <div class="sidebar-block">
+              <div class="sidebar-label">Current Focus</div>
+              <div class="sidebar-value">Associate Product Manager, Product Analyst, AI PM Intern</div>
+            </div>
+            <div class="sidebar-block">
+              <div class="sidebar-label">Location</div>
+              <div class="sidebar-value">Hyderabad, Telangana, India</div>
+            </div>
+            <div class="sidebar-block">
+              <div class="sidebar-label">Core Specialization</div>
+              <div class="sidebar-value">Product Discovery, JTBD, Prompting & LLM Flows, SQL/Python Analytics</div>
+            </div>
+            <div class="sidebar-block">
+              <div class="sidebar-label">Active Learning</div>
+              <div class="sidebar-value">HelloPM AI Product Management Program</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work / Projects Section -->
+    <section id="work">
+      <div class="container">
+        <span class="section-eyebrow">Case Studies & Projects</span>
+        <h2 class="section-title">Selected Product & Analytics Work</h2>
+        <p class="section-subhead">
+          Real problems explored through user discovery, structured frameworks, and data modeling.
+        </p>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: Instagram AI Search -->
+          <article class="project-card">
+            <span class="project-tag">AI Product Discovery & Prototyping</span>
+            <div class="project-header-row">
+              <h3 class="project-title">Instagram AI Search for Saved Content</h3>
+            </div>
+            <p class="project-summary">
+              A concept and functional prototype redesigning saved content retrieval to solve user bookmark hoarding and discovery friction using multi-modal AI querying.
+            </p>
+
+            <div class="case-details-grid">
+              <div class="case-detail-item">
+                <h4>Problem & Friction Point</h4>
+                <p>Users save high volumes of reels and posts but fail to retrieve them when needed because keyword tags and default collection folders are cumbersome to navigate.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>Proposed Solution</h4>
+                <p>An AI-powered semantic search layer enabling natural language discovery across keywords, audio clips, creator references, and contextual metadata.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>My Execution</h4>
+                <p>Framed the product spec, mapped user search queries, and engineered an interactive prototype using Lovable to demonstrate semantic retrieval behavior.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>Outcome & Status</h4>
+                <p><strong>Interactive Prototype Built:</strong> Validated user interface flow for multi-attribute retrieval without requiring tedious manual bookmark sorting.</p>
+              </div>
+            </div>
+
+            <div class="project-meta-row">
+              <div class="tech-pill-list">
+                <span class="tech-pill">Lovable</span>
+                <span class="tech-pill">AI Product Concepts</span>
+                <span class="tech-pill">Semantic Search UX</span>
+                <span class="tech-pill">Rapid Prototyping</span>
+              </div>
+              <button class="accordion-toggle" aria-expanded="false" onclick="toggleDetails(this)">
+                <span>Read Discovery Rationale</span> ↓
+              </button>
+            </div>
+
+            <div class="case-expanded-content">
+              <p><strong>Product Rationale:</strong> The "Save" feature in social applications suffers from an asymmetric effort ratio: saving requires 1 tap, but retrieval requires exhaustive visual scanning. By introducing conversational and associative queries (e.g., "that pasta recipe with creamy garlic from last week"), users can bypass manual taxonomy entirely, driving higher repeat engagement with stored assets.</p>
+            </div>
+          </article>
+
+          <!-- Project 2: Zomato Growth & Strategy -->
+          <article class="project-card">
+            <span class="project-tag">Product Strategy & Growth teardown</span>
+            <div class="project-header-row">
+              <h3 class="project-title">Zomato Growth & Product Strategy Teardown</h3>
+            </div>
+            <p class="project-summary">
+              An end-to-end teardown identifying conversion bottlenecks and structural drop-off points across user onboarding and checkout funnels.
+            </p>
+
+            <div class="case-details-grid">
+              <div class="case-detail-item">
+                <h4>Product Discovery & Framing</h4>
+                <p>Conducted persona segmentation, user journey teardowns, and Jobs-to-Be-Done (JTBD) analysis across discovery and ordering milestones.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>Prioritization Matrix</h4>
+                <p>Benchmarked competitive alternatives and evaluated potential feature improvements against impact, effort, and drop-off severity.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>Metric Framework</h4>
+                <p>Defined a measurable telemetry tree: identified North Star Metric, Conversion Rate, Order Frequency, and 30-Day Cohort Retention.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>Impact Distinction</h4>
+                <p><strong>Strategic Proposal:</strong> Hypothesized targeted UX interventions to minimize decision fatigue in restaurant discovery menus.</p>
+              </div>
+            </div>
+
+            <div class="project-meta-row">
+              <div class="tech-pill-list">
+                <span class="tech-pill">JTBD</span>
+                <span class="tech-pill">Metrics Definition</span>
+                <span class="tech-pill">Competitive Benchmarking</span>
+                <span class="tech-pill">User Journeys</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Football Analytics Pipeline -->
+          <article class="project-card">
+            <span class="project-tag">Quantitative Data Modeling</span>
+            <div class="project-header-row">
+              <h3 class="project-title">Sports Performance Analytics & Predictive Modeling</h3>
+            </div>
+            <p class="project-summary">
+              An end-to-end data analytics and predictive modeling pipeline parsing 5,000+ match performance records to uncover player behavior patterns.
+            </p>
+
+            <div class="case-details-grid">
+              <div class="case-detail-item">
+                <h4>Data Engineering</h4>
+                <p>Built ingestion scripts and statistical workflows cleansing 5K+ records across SQL schemas and Python dataframes.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>Analytical Methods</h4>
+                <p>Employed statistical clustering (K-Means) and multi-variable regression to map multidimensional performance indicators.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>Model Performance</h4>
+                <p>Trained regression models achieving an <strong>R² score of 0.89</strong>, proving strong statistical explanation of key outcome variables.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>Synthesis & Visualization</h4>
+                <p>Constructed Tableau dashboards turning abstract coefficient distributions into actionable decision matrices.</p>
+              </div>
+            </div>
+
+            <div class="project-meta-row">
+              <div class="tech-pill-list">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">SQL</span>
+                <span class="tech-pill">Tableau</span>
+                <span class="tech-pill">Regression & Clustering</span>
+                <span class="tech-pill">Statistics</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <div class="container">
+        <span class="section-eyebrow">Career Timeline</span>
+        <h2 class="section-title">Verified Experience</h2>
+        <p class="section-subhead">
+          A track record spanning user discovery, enterprise data analytics, and software engineering foundations.
+        </p>
+
+        <div class="experience-list">
+
+          <!-- PML School -->
+          <div class="experience-item">
+            <div class="exp-meta">
+              <div class="exp-period">Jan 2026 – Jun 2026</div>
+              <span class="exp-type-tag">Internship & Leadership</span>
+            </div>
+            <div class="exp-content">
+              <h3 class="exp-role-title">AI Product Manager Intern / Volunteer</h3>
+              <div class="exp-company">PML School (Product Management Learning)</div>
+              <ul class="exp-bullets">
+                <li>Conducted <strong>15+ user discovery interviews</strong> with aspiring product managers to identify onboarding friction and adoption barriers.</li>
+                <li>Applied the <strong>Jobs-to-Be-Done (JTBD)</strong> framework to decode functional, emotional, and social learner motivations.</li>
+                <li>Proposed product improvements, including interactive case studies and portfolio-based learning modules.</li>
+                <li>Designed structured continuous feedback loops with mentors and learners to drive program visibility and engagement.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Meaplatform -->
+          <div class="experience-item">
+            <div class="exp-meta">
+              <div class="exp-period">Apr 2025 – Dec 2025</div>
+              <span class="exp-type-tag">Professional Employment</span>
+            </div>
+            <div class="exp-content">
+              <h3 class="exp-role-title">Data Analyst</h3>
+              <div class="exp-company">Meaplatform (mea) — InsurTech & Enterprise SaaS</div>
+              <ul class="exp-bullets">
+                <li>Processed and structured <strong>7,000+ insurance submissions</strong>, improving overall analytics and ML readiness by <strong>30%</strong>.</li>
+                <li>Performed rigorous quality validation and schema compliance across <strong>5,000+ customer records</strong> against strict business rules.</li>
+                <li>Partnered with AI/ML engineering and business operations to optimize workflow automation pipelines, improving operational decision efficiency by <strong>20%</strong>.</li>
+                <li>Extracted, cleansed, and prepared complex structured and unstructured insurance records for automated ingestion.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Hexaware -->
+          <div class="experience-item">
+            <div class="exp-meta">
+              <div class="exp-period">May 2022 – Aug 2023</div>
+              <span class="exp-type-tag">Apprenticeship</span>
+            </div>
+            <div class="exp-content">
+              <h3 class="exp-role-title">Software Engineering Apprentice</h3>
+              <div class="exp-company">Hexaware Technologies</div>
+              <ul class="exp-bullets">
+                <li>Trained across Core Java, Object-Oriented Programming (OOPs), collections frameworks, and database SQL querying.</li>
+                <li>Applied SDLC and Agile/Scrum processes in team sprints, participating in regular code reviews and version management using Git/GitHub.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <span class="section-eyebrow">Capabilities</span>
+        <h2 class="section-title">Skills & Tooling</h2>
+        <p class="section-subhead">
+          Strictly based on verified projects, daily workflows, and completed coursework.
+        </p>
+
+        <div class="skills-category-grid">
+          
+          <div class="skills-block">
+            <h3>Product Management</h3>
+            <div class="skills-pill-group">
+              <span class="skill-tag">Product Discovery</span>
+              <span class="skill-tag">Jobs-to-Be-Done (JTBD)</span>
+              <span class="skill-tag">User Interviewing (15+)</span>
+              <span class="skill-tag">User Psychology & Friction</span>
+              <span class="skill-tag">North Star Metrics</span>
+              <span class="skill-tag">Funnel Optimization</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <h3>AI & Generative AI</h3>
+            <div class="skills-pill-group">
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">LLM Fundamentals</span>
+              <span class="skill-tag">AI Product Concepts</span>
+              <span class="skill-tag">Semantic Search Redesign</span>
+              <span class="skill-tag">AI Workflow Automation</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <h3>Data Analytics & Math</h3>
+            <div class="skills-pill-group">
+              <span class="skill-tag">SQL (Complex Queries)</span>
+              <span class="skill-tag">Python (Data Science)</span>
+              <span class="skill-tag">Advanced Excel Dashboards</span>
+              <span class="skill-tag">Statistical Modeling</span>
+              <span class="skill-tag">Regression Analysis</span>
+              <span class="skill-tag">K-Means Clustering</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <h3>Tools & Platforms</h3>
+            <div class="skills-pill-group">
+              <span class="skill-tag">Tableau</span>
+              <span class="skill-tag">Lovable</span>
+              <span class="skill-tag">Notion</span>
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">Agile / Scrum</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education">
+      <div class="container">
+        <span class="section-eyebrow">Credentials</span>
+        <h2 class="section-title">Education & Certifications</h2>
+
+        <div class="credentials-grid">
+          
+          <div class="credential-card">
+            <h3>Formal Education</h3>
+            <div class="credential-sub">Foundations in analytical engineering</div>
+            <ul class="credential-list">
+              <li>
+                <div>
+                  <strong>B.Tech in Electronics & Communication Engineering</strong><br>
+                  Sri Vasavi Engineering College
+                </div>
+                <span>2019 – 2023</span>
+              </li>
+              <li>
+                <div>
+                  <strong>Postgraduate Advanced Program</strong><br>
+                  NIIT Pune — Data Science & ML with GenAI
+                </div>
+                <span>2024 – 2025</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="credential-card">
+            <h3>Specialized Programs & Certifications</h3>
+            <div class="credential-sub">Continuous professional education</div>
+            <ul class="credential-list">
+              <li>
+                <div>
+                  <strong>AI Product Management Program</strong><br>
+                  HelloPM
+                </div>
+                <span>Pursuing</span>
+              </li>
+              <li>
+                <div>
+                  <strong>Data Science Foundations & SQL Basic</strong><br>
+                  Cognitive Class / Industry Certifications
+                </div>
+                <span>Verified</span>
+              </li>
+              <li>
+                <div>
+                  <strong>AI Toolkit For Professionals</strong><br>
+                  Professional Certification
+                </div>
+                <span>Verified</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-container">
+          <span class="section-eyebrow">Initiate Contact</span>
+          <h2>Let's build something thoughtful.</h2>
+          <p>
+            Whether you are evaluating candidates for an <strong>Associate Product Manager</strong>, <strong>Product Analyst</strong>, or <strong>AI PM Intern</strong> role, I'd welcome a conversation about users, data, and intelligent systems.
+          </p>
+          <div class="contact-links-row">
+            <a href="mailto:haripriyasudheera@zohomail.in" class="btn btn-primary">
+              haripriyasudheera@zohomail.in
+            </a>
+            <a href="https://www.linkedin.com/in/konduri-haripriyasudheera" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          © <span id="current-year">2026</span> Sudheera K. Designed with clarity & restraint.
+        </div>
+        <div class="footer-social-links">
+          <a href="https://www.linkedin.com/in/konduri-haripriyasudheera" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:haripriyasudheera@zohomail.in">Email</a>
+          <a href="tel:+916303719853">+91 6303719853</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set dynamic copyright year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Mobile Navigation Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const primaryNav = document.getElementById('primary-menu');
+
+    if (menuToggle && primaryNav) {
+      menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        primaryNav.classList.toggle('is-open');
+      });
+
+      // Close mobile menu on clicking any navigation link
+      primaryNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.setAttribute('aria-expanded', 'false');
+          primaryNav.classList.remove('is-open');
+        });
+      });
+    }
+
+    // Accessible Case Study Accordion Toggle
+    function toggleDetails(button) {
+      const card = button.closest('.project-card');
+      const details = card.querySelector('.case-expanded-content');
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      
+      button.setAttribute('aria-expanded', !isExpanded);
+      details.classList.toggle('is-open');
+
+      if (!isExpanded) {
+        button.innerHTML = '<span>Hide Discovery Rationale</span> ↑';
+      } else {
+        button.innerHTML = '<span>Read Discovery Rationale</span> ↓';
+      }
+    }
+  </script>
+</body>
+</html>
