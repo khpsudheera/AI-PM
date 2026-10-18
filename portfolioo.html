@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudheera K — AI Product Manager & Product Thinker</title>
+  <meta name="description" content="Portfolio of Sudheera K (Haripriya Sudheera Konduri): Aspiring Associate Product Manager & Data Analyst. Case studies across Instagram Saved Retrieval, Zomato, Blinkit, and Sports Analytics.">
+  <meta name="theme-color" content="#FAFAF8">
+
+  <style>
+    /* -------------------------------------------------------------
+       DESIGN SYSTEM & CSS VARIABLES
+       Apple-inspired editorial minimalism: intentional whitespace,
+       subtle contrast, crisp typography, and restrained accents.
+       ------------------------------------------------------------- */
+    :root {
+      --bg-primary: #FAFAF8;
+      --bg-secondary: #F3F3EF;
+      --bg-card: #FFFFFF;
+      --bg-card-subtle: #F7F7F4;
+      --text-primary: #121316;
+      --text-secondary: #54575E;
+      --text-tertiary: #858890;
+      --border-subtle: rgba(18, 19, 22, 0.08);
+      --border-medium: rgba(18, 19, 22, 0.16);
+      --accent-primary: #004BE4;       /* Restrained electric cobalt */
+      --accent-soft: rgba(0, 75, 228, 0.07);
+      --focus-ring: #004BE4;
+      --container-max: 1040px;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.03);
+      --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.07);
+      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --transition-standard: 200ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-stack);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.6;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--focus-ring);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1.5rem;
+      background: var(--text-primary);
+      color: var(--bg-primary);
+      padding: 0.75rem 1.25rem;
+      z-index: 1000;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 500;
+      transition: top var(--transition-standard);
+    }
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    h1, h2, h3, h4, h5 {
+      color: var(--text-primary);
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.22;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 5.5rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-eyebrow {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-primary);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+      margin-bottom: 1.25rem;
+    }
+
+    .section-subhead {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin-bottom: 3rem;
+    }
+
+    /* Header & Navigation */
+    .site-header {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 250, 248, 0.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border-subtle);
+      z-index: 100;
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .brand {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand-status {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10B981;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      transition: color var(--transition-standard);
+      font-weight: 450;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-cta {
+      background: var(--text-primary);
+      color: #FFFFFF !important;
+      padding: 0.45rem 0.95rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.8125rem !important;
+      font-weight: 500 !important;
+      transition: opacity var(--transition-standard) !important;
+    }
+    .nav-cta:hover {
+      opacity: 0.88;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-medium);
+      padding: 0.4rem 0.65rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      color: var(--text-primary);
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero-section {
+      padding: 6.5rem 0 5.5rem 0;
+    }
+
+    .hero-container {
+      max-width: 880px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5.2vw, 4.1rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      margin-bottom: 1.5rem;
+      font-weight: 650;
+    }
+
+    .hero-title span {
+      color: var(--text-tertiary);
+      font-weight: 400;
+    }
+
+    .hero-description {
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 2.25rem;
+      max-width: 740px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      padding: 0.75rem 1.4rem;
+      border-radius: var(--radius-sm);
+      transition: all var(--transition-standard);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--text-primary);
+      color: #FFFFFF;
+      border: 1px solid var(--text-primary);
+    }
+    .btn-primary:hover {
+      background: #25272C;
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border-medium);
+    }
+    .btn-secondary:hover {
+      background: var(--bg-secondary);
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    .about-narrative p {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+    }
+
+    .about-narrative strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .about-sidebar {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+    }
+
+    .sidebar-block {
+      margin-bottom: 1.5rem;
+    }
+    .sidebar-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .sidebar-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-tertiary);
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .sidebar-value {
+      font-size: 0.9375rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    /* Projects / Case Studies */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      transition: border-color var(--transition-standard), box-shadow var(--transition-standard);
+      position: relative;
+    }
+
+    .project-card:hover {
+      border-color: var(--border-medium);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .project-meta-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .project-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-primary);
+      background: var(--accent-soft);
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+    }
+
+    .project-evidence-badge {
+      font-size: 0.8rem;
+      color: var(--text-primary);
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .project-title {
+      font-size: clamp(1.45rem, 2.5vw, 1.85rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .project-summary {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.75rem;
+      max-width: 840px;
+    }
+
+    /* Case Metric / Evidence Ribbon */
+    .evidence-ribbon {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .evidence-stat h4 {
+      font-size: 1.5rem;
+      color: var(--accent-primary);
+      margin-bottom: 0.15rem;
+    }
+
+    .evidence-stat span {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .case-details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-subtle);
+      padding: 1.35rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 1.75rem;
+    }
+
+    .case-detail-item h4 {
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-tertiary);
+      margin-bottom: 0.4rem;
+    }
+
+    .case-detail-item p {
+      font-size: 0.9375rem;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+
+    /* Skills in Action */
+    .skills-in-action {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .skills-in-action h4 {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-tertiary);
+      margin-bottom: 1rem;
+    }
+
+    .skills-action-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-action-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+    }
+
+    .skill-action-title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--accent-primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .skill-action-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    .project-links-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .doc-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--accent-primary);
+      border: 1px solid var(--border-medium);
+      padding: 0.45rem 0.9rem;
+      border-radius: var(--radius-sm);
+      background: var(--bg-card);
+      transition: background var(--transition-standard);
+    }
+    .doc-link-btn:hover {
+      background: var(--bg-secondary);
+    }
+
+    .project-footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .tech-pill-list {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .tech-pill {
+      font-size: 0.8125rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      padding: 0.2rem 0.65rem;
+      border-radius: 4px;
+      color: var(--text-secondary);
+    }
+
+    .accordion-toggle {
+      background: transparent;
+      border: none;
+      color: var(--accent-primary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      cursor: pointer;
+      padding: 0.4rem 0;
+    }
+    .accordion-toggle:hover {
+      text-decoration: underline;
+    }
+
+    .case-expanded-content {
+      display: none;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px dashed var(--border-medium);
+    }
+
+    .case-expanded-content.is-open {
+      display: block;
+      animation: fadeIn 250ms ease-out;
+    }
+
+    .step-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .step-timeline-item {
+      padding-left: 1.5rem;
+      border-left: 2px solid var(--border-medium);
+      position: relative;
+    }
+
+    .step-timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 5px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-primary);
+    }
+
+    .step-timeline-item h5 {
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .step-timeline-item p {
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Content & Community */
+    .content-subsections {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+
+    .content-lead-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+    }
+
+    .impact-callout-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .impact-callout-item {
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+    }
+
+    .impact-callout-item h4 {
+      font-size: 0.95rem;
+      color: var(--accent-primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .impact-callout-item p {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .social-profile-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.25rem;
+    }
+
+    /* Photo Galleries & Placeholders */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .photo-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition-standard), box-shadow var(--transition-standard);
+    }
+    .photo-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .photo-frame {
+      width: 100%;
+      height: 240px;
+      background: var(--bg-secondary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-placeholder-box {
+      border: 2px dashed var(--border-medium);
+      border-radius: var(--radius-sm);
+      width: 90%;
+      height: 85%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.5);
+      text-align: center;
+    }
+
+    .photo-placeholder-box svg {
+      width: 32px;
+      height: 32px;
+      stroke: var(--text-tertiary);
+      margin-bottom: 0.5rem;
+    }
+
+    .placeholder-prompt {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .placeholder-hint {
+      font-size: 0.75rem;
+      color: var(--text-tertiary);
+      margin-top: 0.2rem;
+    }
+
+    .photo-caption {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .photo-caption h4 {
+      font-size: 1.15rem;
+    }
+
+    .photo-meta-tag {
+      font-size: 0.75rem;
+      color: var(--accent-primary);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .photo-caption p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Experience Timeline */
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .experience-item {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .experience-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .exp-period {
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .exp-type-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      background: var(--bg-secondary);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .exp-role-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .exp-company {
+      font-size: 0.95rem;
+      color: var(--accent-primary);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .exp-bullets {
+      list-style-type: none;
+    }
+
+    .exp-bullets li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .exp-bullets li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--text-tertiary);
+    }
+
+    .exp-bullets li strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* HelloPM Curriculum Roadmap inside timeline */
+    .curriculum-roadmap {
+      margin-top: 1rem;
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+    }
+
+    .curriculum-roadmap h5 {
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-tertiary);
+      margin-bottom: 0.6rem;
+    }
+
+    .curriculum-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .curriculum-tag {
+      font-size: 0.8rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 0.2rem 0.55rem;
+      border-radius: 3px;
+      color: var(--text-secondary);
+    }
+
+    /* Skills Grid */
+    .skills-category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .skills-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+    }
+
+    .skills-block h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skills-pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      font-size: 0.875rem;
+      background: var(--bg-card-subtle);
+      color: var(--text-primary);
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      font-weight: 450;
+    }
+
+    /* Education */
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .credential-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+    }
+
+    .credential-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .credential-sub {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .credential-list {
+      list-style: none;
+    }
+
+    .credential-list li {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      padding: 0.5rem 0;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .credential-list li span:last-child {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+    }
+
+    /* Contact */
+    .contact-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem 2.5rem;
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .contact-container h2 {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      margin-bottom: 1rem;
+    }
+
+    .contact-container p {
+      font-size: 1.1rem;
+      max-width: 580px;
+      margin: 0 auto 2.25rem auto;
+      color: var(--text-secondary);
+    }
+
+    .contact-links-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    footer {
+      padding: 3rem 0;
+      background: var(--bg-primary);
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-social-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-social-links a {
+      color: var(--text-secondary);
+      transition: color var(--transition-standard);
+    }
+    .footer-social-links a:hover {
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 4rem 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg-primary);
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border-subtle);
+        gap: 1.25rem;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .experience-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .case-details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .credentials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-container {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main Navigation">
+        <a href="#hero" class="brand">
+          <span class="brand-status" title="Open to opportunities"></span>
+          Sudheera K
+        </a>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation menu">
+          Menu
+        </button>
+
+        <ul class="nav-links" id="primary-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Case Studies</a></li>
+          <li><a href="#content-community">Content & Community</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact" class="nav-cta">Connect</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-container">
+          <div class="hero-badge">
+            <span>●</span> Associate Product Manager & AI Product Thinker
+          </div>
+          <h1 class="hero-title">
+            Observing human friction.<br>
+            <span>Engineering intelligent products.</span>
+          </h1>
+          <p class="hero-description">
+            1.2 years of enterprise data analytics and business growth combined with applied LLM workflows, qualitative user discovery, and rapid prototyping. I translate cognitive friction into prioritized PRDs and validated product bets.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">Explore Case Studies</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <span class="section-eyebrow">Professional Philosophy</span>
+        <h2 class="section-title">Rooted in Data, Driven by User Psychology</h2>
+
+        <div class="about-grid">
+          <div class="about-narrative">
+            <p>
+              Product management does not start in strategy templates or roadmaps. It begins on the ground: observing why people behave the way they do, where workflows cause cognitive drop-off, and how small architectural choices reshape user habits.
+            </p>
+            <p>
+              My background brings together <strong>customer understanding and operations</strong> at TFS Gym with <strong>enterprise data analytics</strong> at Meaplatform, where I verified and structured thousands of insurance records for AI workflow automation. That operational discipline taught me to validate assumptions with data before committing engineering resources.
+            </p>
+            <p>
+              Currently upskilling as an <strong>AI Product Management Fellow at HelloPM</strong>, I combine analytical discipline with rapid prototyping—translating user research (surveys, 1-on-1 discovery) into prioritized Jobs-to-Be-Done (JTBD), structured PRDs, and functional interactive prototypes.
+            </p>
+          </div>
+
+          <aside class="about-sidebar">
+            <div class="sidebar-block">
+              <div class="sidebar-label">Target Roles</div>
+              <div class="sidebar-value">Associate Product Manager, Product Analyst, AI PM Intern</div>
+            </div>
+            <div class="sidebar-block">
+              <div class="sidebar-label">Location</div>
+              <div class="sidebar-value">Hyderabad, Telangana, India</div>
+            </div>
+            <div class="sidebar-block">
+              <div class="sidebar-label">Specializations</div>
+              <div class="sidebar-value">User Discovery, JTBD, PRD Writing, Prompt & Context Engineering, SQL, Python</div>
+            </div>
+            <div class="sidebar-block">
+              <div class="sidebar-label">Active Fellowship</div>
+              <div class="sidebar-value">HelloPM AI Product Management Cohort</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work / Product Case Studies -->
+    <section id="work">
+      <div class="container">
+        <span class="section-eyebrow">Structured Problem-Solving</span>
+        <h2 class="section-title">Selected Case Studies & Projects</h2>
+        <p class="section-subhead">
+          Four case studies demonstrating the full product lifecycle: from quantitative data modeling and rapid discovery to RICE prioritization, PRD documentation, and functional prototyping.
+        </p>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: Instagram Saved Content Retrieval -->
+          <article class="project-card" id="project-instagram">
+            <div class="project-meta-top">
+              <span class="project-tag">01 · End-to-End Product Discovery & PRD</span>
+              <span class="project-evidence-badge">5 Interviews · 28 Survey Responses · Functional Prototype</span>
+            </div>
+            <h3 class="project-title">Instagram: Improving Saved Content Retrieval</h3>
+            <p class="project-summary">
+              An independent product case study investigating why users abandon their Saved libraries as bookmarks accumulate, followed by the design, RICE prioritization, PRD documentation, and prototyping of an in-library multi-attribute search experience.
+            </p>
+
+            <!-- Evidence Ribbon -->
+            <div class="evidence-ribbon">
+              <div class="evidence-stat">
+                <h4>5</h4>
+                <span>In-Depth User Interviews</span>
+              </div>
+              <div class="evidence-stat">
+                <h4>28</h4>
+                <span>Survey Responses Analyzed</span>
+              </div>
+              <div class="evidence-stat">
+                <h4>P0</h4>
+                <span>RICE-Prioritized Solution Bet</span>
+              </div>
+              <div class="evidence-stat">
+                <h4>Live</h4>
+                <span>Interactive Functional Prototype</span>
+              </div>
+            </div>
+
+            <div class="case-details-grid">
+              <div class="case-detail-item">
+                <h4>1. Problem & Core Friction</h4>
+                <p>Users save high volumes of posts and Reels for later reference, but retrieval effort increases exponentially as collections grow. Without search, bookmarks become a "graveyard" of forgotten intent.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>2. Proposed Solution</h4>
+                <p>An in-Saved search experience enabling users to query saved content using remembered keywords, caption fragments, hashtags, creator handles, and audio titles.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>3. Scope & Execution</h4>
+                <p>Executed 5 user interviews, synthesized 28 survey responses, conducted RICE prioritization, authored a comprehensive PRD (goals, non-goals, user stories, acceptance criteria), and built a functional prototype.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>4. Outcomes & Distinction</h4>
+                <p><strong>Actual Work:</strong> Research synthesis, PRD documentation, and interactive prototype.<br><strong>Proposed Impact:</strong> Increased Saved item retrieval rate, reduced time-to-retrieve, and lower search abandonment.</p>
+              </div>
+            </div>
+
+            <!-- Skills in Action Panel -->
+            <div class="skills-in-action">
+              <h4>Skills in Action</h4>
+              <div class="skills-action-grid">
+                <div class="skill-action-card">
+                  <div class="skill-action-title">User Discovery & Survey Design</div>
+                  <div class="skill-action-desc">Formulated non-leading questions to uncover saving triggers, organizational habits, and retrieval abandonment patterns.</div>
+                </div>
+                <div class="skill-action-card">
+                  <div class="skill-action-title">RICE Prioritization</div>
+                  <div class="skill-action-desc">Evaluated competing user problems against Reach, Impact, Confidence, and Effort to justify Saved retrieval as the primary P0 bet.</div>
+                </div>
+                <div class="skill-action-card">
+                  <div class="skill-action-title">PRD Writing & Acceptance Criteria</div>
+                  <div class="skill-action-desc">Drafted product boundaries, non-goals, user stories, edge cases (e.g., partial memory, audio-only recall), and acceptance criteria.</div>
+                </div>
+                <div class="skill-action-card">
+                  <div class="skill-action-title">Rapid Prototyping</div>
+                  <div class="skill-action-desc">Built a working interactive prototype demonstrating multi-attribute query parsing and search result interaction flows.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Verified Project Documentation Links -->
+            <div class="project-links-row">
+              <a href="https://instagramsearchprototype.ai.studio/" target="_blank" rel="noopener noreferrer" class="doc-link-btn">
+                <span>View Live Prototype</span> ↗
+              </a>
+              <a href="https://drive.google.com/drive/folders/1knpQewTaau8vvvwBCrcFcLQaXZ5PNObB?usp=sharing" target="_blank" rel="noopener noreferrer" class="doc-link-btn">
+                <span>View Full PRD & Research Docs</span> ↗
+              </a>
+            </div>
+
+            <div class="project-footer-row">
+              <div class="tech-pill-list">
+                <span class="tech-pill">PRD Writing</span>
+                <span class="tech-pill">RICE Framework</span>
+                <span class="tech-pill">User Interviews</span>
+                <span class="tech-pill">Survey Synthesis</span>
+                <span class="tech-pill">Interactive Prototyping</span>
+              </div>
+              <button class="accordion-toggle" aria-expanded="false" onclick="toggleDetails(this)">
+                <span>Read 7-Step PM Process Breakdown</span> ↓
+              </button>
+            </div>
+
+            <!-- Deep Dive Accordion -->
+            <div class="case-expanded-content">
+              <div class="step-timeline">
+                <div class="step-timeline-item">
+                  <h5>Step 1 — Product & Business Research</h5>
+                  <p>Studied Instagram's core loop, business context, and potential friction points across content consumption, followed accounts, and saved collections.</p>
+                </div>
+                <div class="step-timeline-item">
+                  <h5>Step 2 — User Research (5 Interviews, 28 Surveys)</h5>
+                  <p>Investigated saving triggers, folder usage (only a minority maintain custom collections), and specific scenarios where retrieval was attempted and abandoned.</p>
+                </div>
+                <div class="step-timeline-item">
+                  <h5>Step 3 — Insights & Problem Definition</h5>
+                  <p>Identified that while saving requires trivial effort (1 tap), retrieval demands high cognitive effort (scrolling through hundreds of unindexed items). Re-evaluated initial assumptions and framed the problem around associative retrieval.</p>
+                </div>
+                <div class="step-timeline-item">
+                  <h5>Step 4 — RICE Prioritization</h5>
+                  <p>Compared competing validated problems (e.g., auto-categorization folders vs. search vs. reminder notifications). Scored search highest due to high reach across all saving users and direct impact on utility.</p>
+                </div>
+                <div class="step-timeline-item">
+                  <h5>Step 5 — Solution Design & Interactive Prototype</h5>
+                  <p>Designed search interactions accommodating fuzzy memory: searching by creator handle, caption keywords, audio name, or hashtag.</p>
+                </div>
+                <div class="step-timeline-item">
+                  <h5>Step 6 — Comprehensive PRD Development</h5>
+                  <p>Documented goals, non-goals, functional requirements, user stories, and acceptance criteria. Defined edge cases such as zero search results and handling expired/deleted original posts.</p>
+                </div>
+                <div class="step-timeline-item">
+                  <h5>Step 7 — Success Measurement & Proposed Roadmap</h5>
+                  <p>Defined core KPIs: Saved Retrieval Success Rate, Time to Retrieve, and Search Abandonment Rate. Outlined validation phases from internal dogfooding to phased rollout.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Zomato Growth & Strategy -->
+          <article class="project-card" id="project-zomato">
+            <div class="project-meta-top">
+              <span class="project-tag">02 · Product Strategy & Teardown</span>
+              <span class="project-evidence-badge">Funnel Analysis & Metrics Framework</span>
+            </div>
+            <h3 class="project-title">Zomato Growth & Product Strategy Teardown</h3>
+            <p class="project-summary">
+              An end-to-end teardown investigating user onboarding, restaurant discovery, and checkout drop-offs to model improvements in conversion and repeat order frequency.
+            </p>
+
+            <div class="case-details-grid">
+              <div class="case-detail-item">
+                <h4>1. Business & User Context</h4>
+                <p>Analyzed food delivery unit economics, where customer acquisition costs demand consistent repeat ordering, basket size optimization, and high 30-day cohort retention.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>2. JTBD & Friction Identification</h4>
+                <p>Mapped "Hungry Now" (speed, friction-free) vs. "Social Exploration" jobs; isolated choice overload in restaurant menus and fee transparency friction at checkout.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>3. Telemetry & Metrics Tree</h4>
+                <p>Constructed an actionable product metrics hierarchy: North Star Metric (Completed Orders per Monthly Active User), Conversion Rate, and Order Frequency.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>4. Outcomes & Recommendations</h4>
+                <p><strong>Status:</strong> Hypothesis-based strategic recommendations prioritizing simplified dish-level discovery over restaurant-level browsing.</p>
+              </div>
+            </div>
+
+            <!-- Skills in Action Panel -->
+            <div class="skills-in-action">
+              <h4>Skills in Action</h4>
+              <div class="skills-action-grid">
+                <div class="skill-action-card">
+                  <div class="skill-action-title">Jobs-to-Be-Done (JTBD)</div>
+                  <div class="skill-action-desc">Segmented food discovery into distinct functional and emotional jobs to identify where default UI created cognitive friction.</div>
+                </div>
+                <div class="skill-action-card">
+                  <div class="skill-action-title">Competitive Benchmarking</div>
+                  <div class="skill-action-desc">Benchmarked UX differences across Swiggy and Zomato regarding checkout steps, delivery fee presentation, and loyalty nudges.</div>
+                </div>
+                <div class="skill-action-card">
+                  <div class="skill-action-title">North Star Metric Framing</div>
+                  <div class="skill-action-desc">Structured primary and secondary telemetry to track whether UX changes drove genuine engagement or artificial clicks.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Documentation Link -->
+            <div class="project-links-row">
+              <a href="https://drive.google.com/drive/folders/1skYAdl93VoOUchwyydBoPpnlcJth89rM?usp=sharing" target="_blank" rel="noopener noreferrer" class="doc-link-btn">
+                <span>View Full Zomato Case Study Docs</span> ↗
+              </a>
+            </div>
+
+            <div class="project-footer-row">
+              <div class="tech-pill-list">
+                <span class="tech-pill">JTBD</span>
+                <span class="tech-pill">Funnel Analysis</span>
+                <span class="tech-pill">North Star Metrics</span>
+                <span class="tech-pill">Competitive Benchmarking</span>
+              </div>
+              <button class="accordion-toggle" aria-expanded="false" onclick="toggleDetails(this)">
+                <span>Read Strategic Analysis Details</span> ↓
+              </button>
+            </div>
+
+            <div class="case-expanded-content">
+              <div class="step-timeline">
+                <div class="step-timeline-item">
+                  <h5>Discovery Friction Analysis</h5>
+                  <p>Identified that users spend an average of several minutes browsing menus without adding items due to review fragmentation. Dish-level social proof reduces choice overload.</p>
+                </div>
+                <div class="step-timeline-item">
+                  <h5>Monetization & Checkout Trade-offs</h5>
+                  <p>Evaluated how unexpected delivery charges at the payment stage trigger cart abandonment, recommending early fee transparency to preserve checkout conversion.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Blinkit Product Discovery -->
+          <article class="project-card" id="project-blinkit">
+            <div class="project-meta-top">
+              <span class="project-tag">03 · Quick Commerce UX & Opportunity Tree</span>
+              <span class="project-evidence-badge">Review Mining · OST · RICE Prioritization</span>
+            </div>
+            <h3 class="project-title">Blinkit Quick-Commerce Product Discovery</h3>
+            <p class="project-summary">
+              A structured product discovery journey analyzing user friction in instant grocery delivery using Play Store reviews, Reddit discussions, and Opportunity Solution Trees (OST).
+            </p>
+
+            <div class="case-details-grid">
+              <div class="case-detail-item">
+                <h4>1. Research & Review Mining</h4>
+                <p>Mined hundreds of Play Store reviews and community discussions on Reddit to identify unprompted user frustrations, stockout issues, and checkout confusion.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>2. JTBD & Pain–Gain Mapping</h4>
+                <p>Converted qualitative user complaints into clear Jobs-to-Be-Done and mapped user emotional states across urgent 10-minute delivery orders.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>3. Opportunity Solution Tree (OST)</h4>
+                <p>Structured opportunity statements into an Opportunity Solution Tree to systematically connect business goals with validated user pain points.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>4. RICE-Prioritized Product Bets</h4>
+                <p><strong>Outcome:</strong> Arrived at evidence-backed product bets focused on transparent out-of-stock substitutes and contextual cart bundling.</p>
+              </div>
+            </div>
+
+            <!-- Skills in Action Panel -->
+            <div class="skills-in-action">
+              <h4>Skills in Action</h4>
+              <div class="skills-action-grid">
+                <div class="skill-action-card">
+                  <div class="skill-action-title">Qualitative Mining (Play Store / Reddit)</div>
+                  <div class="skill-action-desc">Extracted real-world user complaints, isolating systemic app issues from operational delivery delays.</div>
+                </div>
+                <div class="skill-action-card">
+                  <div class="skill-action-title">Opportunity Solution Tree (OST)</div>
+                  <div class="skill-action-desc">Connected business outcomes directly to customer opportunities before brainstorming specific UI features.</div>
+                </div>
+                <div class="skill-action-card">
+                  <div class="skill-action-title">Pain–Gain Mapping</div>
+                  <div class="skill-action-desc">Mapped user anxiety around order accuracy and arrival timing to evaluate where product communication eases user tension.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-footer-row">
+              <div class="tech-pill-list">
+                <span class="tech-pill">Review Mining</span>
+                <span class="tech-pill">Opportunity Solution Tree</span>
+                <span class="tech-pill">JTBD</span>
+                <span class="tech-pill">Pain–Gain Mapping</span>
+                <span class="tech-pill">RICE Framework</span>
+              </div>
+              <button class="accordion-toggle" aria-expanded="false" onclick="toggleDetails(this)">
+                <span>Read Discovery Process Breakdown</span> ↓
+              </button>
+            </div>
+
+            <div class="case-expanded-content">
+              <div class="step-timeline">
+                <div class="step-timeline-item">
+                  <h5>Discovery Rationale</h5>
+                  <p>In quick-commerce, speed is an expectation; friction occurs when items are abruptly unavailable at checkout or when essential complementary items are missed in haste.</p>
+                </div>
+                <div class="step-timeline-item">
+                  <h5>From Ideas to Structured Bets</h5>
+                  <p>Instead of proposing random features, used OST and RICE scoring to prioritize automated in-cart substitution prompts over complex category redesigns.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: Sports Performance Analytics -->
+          <article class="project-card" id="project-football">
+            <div class="project-meta-top">
+              <span class="project-tag">04 · Quantitative Modeling & Data Engineering</span>
+              <span class="project-evidence-badge">5,000+ Records · R² = 0.89 · Tableau & ML</span>
+            </div>
+            <h3 class="project-title">Sports Performance Data Pipeline & Machine Learning</h3>
+            <p class="project-summary">
+              An end-to-end data analytics and statistical modeling pipeline processing 5,000+ player performance records using SQL, Python, clustering, and regression models.
+            </p>
+
+            <div class="case-details-grid">
+              <div class="case-detail-item">
+                <h4>1. Analytical Objective</h4>
+                <p>Quantify multi-dimensional player performance indicators and predict match contribution values across multi-season records.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>2. Data Engineering & EDA</h4>
+                <p>Cleansed and transformed 5,000+ rows using SQL and Python (Pandas/NumPy); evaluated distributions and eliminated collinear metrics via EDA.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>3. Machine Learning Modeling</h4>
+                <p>Trained Linear and Logistic Regression models achieving an <strong>R² score of 0.89</strong>, combined with K-Means and KNN to segment player roles.</p>
+              </div>
+              <div class="case-detail-item">
+                <h4>4. Visualization & Synthesis</h4>
+                <p>Engineered interactive Tableau dashboards translating complex statistical coefficients into scouting and decision matrices.</p>
+              </div>
+            </div>
+
+            <!-- Skills in Action Panel -->
+            <div class="skills-in-action">
+              <h4>Skills in Action</h4>
+              <div class="skills-action-grid">
+                <div class="skill-action-card">
+                  <div class="skill-action-title">SQL & Python EDA</div>
+                  <div class="skill-action-desc">Cleaned schema anomalies, performed outlier detection, and normalized performance metrics across 5K+ match records.</div>
+                </div>
+                <div class="skill-action-card">
+                  <div class="skill-action-title">Regression Modeling (R² = 0.89)</div>
+                  <div class="skill-action-desc">Developed predictive models explaining 89% of performance variance across tactical match variables.</div>
+                </div>
+                <div class="skill-action-card">
+                  <div class="skill-action-title">K-Means & KNN Clustering</div>
+                  <div class="skill-action-desc">Segmented athletes into tactical cohorts based on statistical profiles rather than nominal pitch positions.</div>
+                </div>
+                <div class="skill-action-card">
+                  <div class="skill-action-title">Tableau Dashboarding</div>
+                  <div class="skill-action-desc">Constructed interactive visual filters allowing non-technical coaches and analysts to evaluate player metrics.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-footer-row">
+              <div class="tech-pill-list">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">SQL</span>
+                <span class="tech-pill">EDA</span>
+                <span class="tech-pill">Regression (R² 0.89)</span>
+                <span class="tech-pill">K-Means</span>
+                <span class="tech-pill">KNN</span>
+                <span class="tech-pill">Tableau</span>
+              </div>
+              <button class="accordion-toggle" aria-expanded="false" onclick="toggleDetails(this)">
+                <span>Read Technical Pipeline Details</span> ↓
+              </button>
+            </div>
+
+            <div class="case-expanded-content">
+              <div class="step-timeline">
+                <div class="step-timeline-item">
+                  <h5>Feature Engineering</h5>
+                  <p>Engineered composite indexes including pressure-adjusted pass accuracy and progressive defensive recoveries to isolate game-changing contributions.</p>
+                </div>
+                <div class="step-timeline-item">
+                  <h5>Limitations & Business Value</h5>
+                  <p><strong>Limitations:</strong> Historical match records lack physical biometric tracking.<br><strong>Decision Application:</strong> Enables recruitment teams to identify undervalued talent matching high-performance statistical clusters.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Content & Community Section -->
+    <section id="content-community">
+      <div class="container">
+        <span class="section-eyebrow">Initiative & Ecosystem</span>
+        <h2 class="section-title">Content & Community</h2>
+        <p class="section-subhead">
+          Building in public, synthesizing AI product management concepts into accessible media, and participating in peer and founder communities.
+        </p>
+
+        <div class="content-subsections">
+
+          <!-- Subsection A: Building in Public -->
+          <div class="content-lead-card">
+            <span class="project-tag">Building in Public · YouTube & Instagram</span>
+            <h3 style="font-size: 1.5rem; margin: 0.75rem 0 0.5rem 0;">AI Product Management Educational Content</h3>
+            <p>
+              I independently create educational video content and product breakdowns across Instagram and YouTube, translating product discovery frameworks, user psychology insights, and applied AI workflows into accessible lessons.
+            </p>
+
+            <!-- Audience Inquiries & Consultation Impact -->
+            <div class="impact-callout-grid">
+              <div class="impact-callout-item">
+                <h4>Peer Inquiries & Engagement</h4>
+                <p>Followers and aspiring PMs actively reach out with inquiries regarding AI Product Management roadmaps, finding the educational teardowns practical and actionable.</p>
+              </div>
+              <div class="impact-callout-item">
+                <h4>Inbound Product Consultation</h4>
+                <p>Content positioning led to an inbound consultation inquiry from a client seeking product perspective on their product development direction.</p>
+              </div>
+              <div class="impact-callout-item">
+                <h4>End-to-End Workflow</h4>
+                <p>Handle the complete production pipeline independently: topic research, scriptwriting, hook design, video editing in Instagram Edits, and analytics review.</p>
+              </div>
+            </div>
+
+            <div class="social-profile-links">
+              <a href="https://www.instagram.com/khp_sudheera/?hl=en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                View Instagram Profile ↗
+              </a>
+              <a href="https://www.youtube.com/@khpsudheera" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                View YouTube Channel ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Subsection B: Events & Community -->
+          <div>
+            <span class="section-eyebrow">Community Participation</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Events & Ecosystem Engagements</h3>
+            <p style="margin-bottom: 1.5rem;">
+              Engaging directly with founders, mentors, and product managers to exchange perspectives, understand real operational struggles, and broaden domain horizons.
+            </p>
+
+            <div class="gallery-grid">
+
+              <!-- EVENT 1: Founders Walk — IDC -->
+              <div class="photo-card">
+                <div class="photo-frame">
+                  <!-- =========================================================
+                       PHOTO PLACEHOLDER: FOUNDERS WALK — IDC
+                       Replace below <div> with your actual image: 
+                       <img src="images/founders-walk.jpg" alt="Sudheera K at Founders Walk IDC" loading="lazy">
+                       ========================================================= -->
+                  <div class="photo-placeholder-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                    <span class="placeholder-prompt">Add Founders Walk Photo</span>
+                    <span class="placeholder-hint">Replace with &lt;img src="..."&gt;</span>
+                  </div>
+                </div>
+                <div class="photo-caption">
+                  <span class="photo-meta-tag">IDC Community Event</span>
+                  <h4>Founders Walk — IDC</h4>
+                  <p>
+                    A community initiative conducted by IDC. Interacted directly with active startup founders, learning about their real entrepreneurial struggles, early-stage pivots, and decision-making trade-offs. More than just a walk—an open forum on resilience and business building.
+                  </p>
+                </div>
+              </div>
+
+              <!-- EVENT 2: HelloPM Community Event -->
+              <div class="photo-card">
+                <div class="photo-frame">
+                  <!-- =========================================================
+                       PHOTO PLACEHOLDER: HELLOPM COMMUNITY EVENT
+                       Replace below <div> with your actual image: 
+                       <img src="images/hellopm-event.jpg" alt="Sudheera K at HelloPM Community Meet" loading="lazy">
+                       ========================================================= -->
+                  <div class="photo-placeholder-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                    <span class="placeholder-prompt">Add HelloPM Event Photo</span>
+                    <span class="placeholder-hint">Replace with &lt;img src="..."&gt;</span>
+                  </div>
+                </div>
+                <div class="photo-caption">
+                  <span class="photo-meta-tag">Product Management Meetup</span>
+                  <h4>HelloPM Community Event</h4>
+                  <p>
+                    Collaborated with product managers, mentors, and cohort fellows to exchange case study methodologies, debate AI product implementation patterns, and share practical perspectives on product execution.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience">
+      <div class="container">
+        <span class="section-eyebrow">Career Timeline</span>
+        <h2 class="section-title">Verified Experience Timeline</h2>
+        <p class="section-subhead">
+          Demonstrated progression across customer growth, enterprise data analytics, and product discovery.
+        </p>
+
+        <div class="experience-list">
+
+          <!-- 1. HelloPM Fellowship -->
+          <div class="experience-item">
+            <div class="exp-meta">
+              <div class="exp-period">Jun 2026 – Present</div>
+              <span class="exp-type-tag">Active Fellowship</span>
+            </div>
+            <div class="exp-content">
+              <h3 class="exp-role-title">AI Product Management Fellow</h3>
+              <div class="exp-company">HelloPM</div>
+              <ul class="exp-bullets">
+                <li>Upskilling in AI product discovery, rapid prototyping, and LLM application design within cohort sprints.</li>
+                <li>Executing structured product teardowns, hypothesis formulation, and metric frameworks.</li>
+              </ul>
+
+              <!-- Concise Curriculum Roadmap -->
+              <div class="curriculum-roadmap">
+                <h5>Core AI PM Curriculum & Applied Topics</h5>
+                <div class="curriculum-tags">
+                  <span class="curriculum-tag">Product Discovery & Execution</span>
+                  <span class="curriculum-tag">Roadmap Planning</span>
+                  <span class="curriculum-tag">GenAI Basics</span>
+                  <span class="curriculum-tag">Context Engineering</span>
+                  <span class="curriculum-tag">AI Agents & Model Evals</span>
+                  <span class="curriculum-tag">No-Code AI Harness Building</span>
+                  <span class="curriculum-tag">Designing AI Experiences Users Trust</span>
+                  <span class="curriculum-tag">Octopus Framework</span>
+                  <span class="curriculum-tag">10x PMing with AI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. PML School -->
+          <div class="experience-item">
+            <div class="exp-meta">
+              <div class="exp-period">Jan 2026 – Jun 2026</div>
+              <span class="exp-type-tag">Internship & Leadership</span>
+            </div>
+            <div class="exp-content">
+              <h3 class="exp-role-title">Product Management Intern / Volunteer</h3>
+              <div class="exp-company">Product Management Learning (PML) School</div>
+              <ul class="exp-bullets">
+                <li>Conducted <strong>15+ user discovery interviews</strong> with learners to uncover onboarding friction points and completion barriers.</li>
+                <li>Applied the <strong>Jobs-to-Be-Done (JTBD)</strong> framework to categorize functional, emotional, and social learner motivations.</li>
+                <li>Proposed product improvements, including interactive case study modules and portfolio-based learning tracks.</li>
+                <li>Designed continuous feedback loops with mentors and learners to drive program visibility and engagement.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 3. Meaplatform -->
+          <div class="experience-item">
+            <div class="exp-meta">
+              <div class="exp-period">Apr 2025 – Dec 2025</div>
+              <span class="exp-type-tag">Professional Employment</span>
+            </div>
+            <div class="exp-content">
+              <h3 class="exp-role-title">Data Analyst</h3>
+              <div class="exp-company">Meaplatform (mea) — InsurTech SaaS & Workflow Automation</div>
+              <ul class="exp-bullets">
+                <li>Processed and structured <strong>7,000+ insurance submissions</strong>, improving overall analytics and ML readiness by <strong>30%</strong>.</li>
+                <li>Conducted schema and quality validation across <strong>5,000+ insurance records</strong>, ensuring compliance with strict enterprise business rules.</li>
+                <li>Partnered with AI/ML engineering and business teams to support workflow automation, improving operational decision efficiency by <strong>20%</strong>.</li>
+                <li>Extracted, cleansed, and normalized large structured and unstructured insurance data pipelines.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 4. TFS Gym -->
+          <div class="experience-item">
+            <div class="exp-meta">
+              <div class="exp-period">2023 – 2024</div>
+              <span class="exp-type-tag">Business & Client Operations</span>
+            </div>
+            <div class="exp-content">
+              <h3 class="exp-role-title">Business & Growth Associate</h3>
+              <div class="exp-company">TFS Gym</div>
+              <ul class="exp-bullets">
+                <li>Managed client interactions and supported personal training services, understanding member motivations and retention friction points.</li>
+                <li>Conducted ground-level market research and customer data analysis to identify member engagement opportunities.</li>
+                <li>Contributed to market positioning and organic social content strategy across Instagram and LinkedIn.</li>
+                <li>Coordinated community fitness events and client engagement activities to foster member retention.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <span class="section-eyebrow">Capabilities</span>
+        <h2 class="section-title">Verified Skills & Tools</h2>
+        <p class="section-subhead">
+          Strictly grouped based on verified project execution, professional roles, and ongoing fellowship training.
+        </p>
+
+        <div class="skills-category-grid">
+          
+          <div class="skills-block">
+            <h3>Product Discovery & Strategy</h3>
+            <div class="skills-pill-group">
+              <span class="skill-tag">Product Discovery</span>
+              <span class="skill-tag">User Interviews (15+)</span>
+              <span class="skill-tag">Survey Design</span>
+              <span class="skill-tag">Jobs-to-Be-Done (JTBD)</span>
+              <span class="skill-tag">Opportunity Solution Tree (OST)</span>
+              <span class="skill-tag">Pain–Gain Mapping</span>
+              <span class="skill-tag">RICE Prioritization</span>
+              <span class="skill-tag">PRD Writing & User Stories</span>
+              <span class="skill-tag">North Star Metric Framing</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <h3>AI Concepts & Prototyping</h3>
+            <div class="skills-pill-group">
+              <span class="skill-tag">Context Engineering</span>
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">AI Agent Fundamentals</span>
+              <span class="skill-tag">Model Evals</span>
+              <span class="skill-tag">AI Harness Building</span>
+              <span class="skill-tag">Semantic Search UX</span>
+              <span class="skill-tag">Rapid Prototyping (Lovable)</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <h3>Data Analytics & Machine Learning</h3>
+            <div class="skills-pill-group">
+              <span class="skill-tag">SQL (Complex Queries)</span>
+              <span class="skill-tag">Python (Pandas, NumPy)</span>
+              <span class="skill-tag">Exploratory Data Analysis (EDA)</span>
+              <span class="skill-tag">Linear & Logistic Regression (R² 0.89)</span>
+              <span class="skill-tag">K-Means Clustering</span>
+              <span class="skill-tag">K-Nearest Neighbors (KNN)</span>
+              <span class="skill-tag">Tableau Dashboards</span>
+              <span class="skill-tag">Excel Dashboards</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <h3>Content, Operations & Outreach</h3>
+            <div class="skills-pill-group">
+              <span class="skill-tag">Scriptwriting & Storytelling</span>
+              <span class="skill-tag">Video Editing (Instagram Edits)</span>
+              <span class="skill-tag">Content Packaging</span>
+              <span class="skill-tag">Audience Inquiries & Consultation</span>
+              <span class="skill-tag">Founder & Peer Networking</span>
+              <span class="skill-tag">Community Collaboration</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <div class="container">
+        <span class="section-eyebrow">Academic & Training Background</span>
+        <h2 class="section-title">Education & Professional Development</h2>
+
+        <div class="credentials-grid">
+          
+          <div class="credential-card">
+            <h3>Formal Higher Education</h3>
+            <div class="credential-sub">Engineering foundation</div>
+            <ul class="credential-list">
+              <li>
+                <div>
+                  <strong>B.Tech in Electronics & Communication Engineering</strong><br>
+                  Sri Vasavi Engineering College
+                </div>
+                <span>2019 – 2023</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="credential-card">
+            <h3>Professional Training & Programs</h3>
+            <div class="credential-sub">Technical and product development</div>
+            <ul class="credential-list">
+              <li>
+                <div>
+                  <strong>AI Product Management Fellowship</strong><br>
+                  HelloPM
+                </div>
+                <span>2026 – Present</span>
+              </li>
+              <li>
+                <div>
+                  <strong>Data Science & Machine Learning with GenAI</strong><br>
+                  NIIT Pune (Advanced Postgraduate Program)
+                </div>
+                <span>2024 – 2025</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-container">
+          <span class="section-eyebrow">Initiate Contact</span>
+          <h2>Let's build something thoughtful.</h2>
+          <p>
+            Currently seeking <strong>Associate Product Manager</strong>, <strong>Product Analyst</strong>, and <strong>AI Product Intern</strong> opportunities. Let's discuss user friction, data integrity, and intelligent product systems.
+          </p>
+          <div class="contact-links-row">
+            <a href="mailto:haripriyasudheera@zohomail.in" class="btn btn-primary">
+              haripriyasudheera@zohomail.in
+            </a>
+            <a href="https://www.linkedin.com/in/konduri-haripriyasudheera" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          © <span id="current-year">2026</span> Sudheera K. Designed with editorial clarity & restraint.
+        </div>
+        <div class="footer-social-links">
+          <a href="https://www.linkedin.com/in/konduri-haripriyasudheera" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.instagram.com/khp_sudheera/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.youtube.com/@khpsudheera" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="mailto:haripriyasudheera@zohomail.in">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const primaryNav = document.getElementById('primary-menu');
+
+    if (menuToggle && primaryNav) {
+      menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        primaryNav.classList.toggle('is-open');
+      });
+
+      primaryNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.setAttribute('aria-expanded', 'false');
+          primaryNav.classList.remove('is-open');
+        });
+      });
+    }
+
+    function toggleDetails(button) {
+      const card = button.closest('.project-card');
+      const details = card.querySelector('.case-expanded-content');
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      
+      button.setAttribute('aria-expanded', !isExpanded);
+      details.classList.toggle('is-open');
+
+      const labelSpan = button.querySelector('span');
+      if (!isExpanded) {
+        labelSpan.textContent = 'Hide Deep Dive';
+        button.innerHTML = '<span>Hide Deep Dive</span> ↑';
+      } else {
+        labelSpan.textContent = 'Read Full Process Breakdown';
+        button.innerHTML = '<span>Read Full Process Breakdown</span> ↓';
+      }
+    }
+  </script>
+</body>
+</html>
